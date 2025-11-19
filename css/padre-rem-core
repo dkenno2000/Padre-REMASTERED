@@ -80,7 +80,7 @@ div[style*="position: absolute"]:has([alt="Developer"]):hover {
 }
 
 #rem-pump-image {
-    filter: saturate(0.75);
+    filter: saturate(0.85);
     transition: filter 0.25s ease;
 }
 
