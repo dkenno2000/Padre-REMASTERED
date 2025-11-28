@@ -1,0 +1,33 @@
+{
+  "name": "Padre REMASTERED",
+  "description": "Extends Padre.gg with advanced features. Built for serious memecoin traders.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "icons": {
+    "128": "img/remastered-logo.png"
+  },
+  "action": {
+    "default_icon": { "128": "img/remastered-logo.png", "16": "img/remastered-logo.png", "48": "img/remastered-logo.png" },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "js/padre-service.js"
+  },
+  "host_permissions": [ "<all_urls>" ],
+  "permissions": [ "tabs", "webRequest", "webNavigation", "storage", "offscreen", "scripting", "activeTab", "debugger" ],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["*://*.padre.gg/*"],
+      "js": ["/libs/livekit.bundle.js", "src/padre-rem.js"],
+      "css": ["css/padre-rem-core.css"],
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["offscreen.html", "img/*.jpg", "img/*.png", "*.js" ],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
