@@ -88,8 +88,13 @@ div[style*="position: absolute"]:has([alt="Developer"]):hover {
     filter: saturate(1);
 }
 
+/*.rem-no-desc {
+  opacity:0.5;
+}*/
+
 .rem-no-desc {
   opacity:0.5;
+  display: inherit;
 }
 
 .rem-img-desc-cont img.rem-left {
