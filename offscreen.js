@@ -11,9 +11,7 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
 async function fetchHtml(url) {
   try {
-    const response = await fetch(url, {
-      headers: { 'Accept': 'text/html', 'User-Agent': 'Mozilla/5.0' }
-    });
+    const response = await fetch(url, {headers: { 'Accept': 'text/html', 'User-Agent': 'Mozilla/5.0' }});
     
     const html = await response.text();
     const parser = new DOMParser();
@@ -29,8 +27,7 @@ async function fetchHtml(url) {
     
   } catch (error) {
     return {
-      success: false,
-      error: error.message
+      success: false, error: error.message
     };
   }
 }
@@ -91,4 +88,5 @@ async function fetchMoonitDescription(url) {
     };
   }
 }
+
 
