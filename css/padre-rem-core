@@ -80,7 +80,7 @@ div[style*="position: absolute"]:has([alt="Developer"]):hover {
 }
 
 #rem-pump-image {
-    filter: saturate(0.85);
+    filter: saturate(0.75);
     transition: filter 0.25s ease;
 }
 
@@ -88,13 +88,8 @@ div[style*="position: absolute"]:has([alt="Developer"]):hover {
     filter: saturate(1);
 }
 
-/*.rem-no-desc {
-  opacity:0.5;
-}*/
-
 .rem-no-desc {
   opacity:0.5;
-  display: inherit;
 }
 
 .rem-img-desc-cont img.rem-left {
@@ -138,20 +133,20 @@ div[style*="position: absolute"]:has([alt="Developer"]):hover {
 /**************** PRICE CHARTS ***************/
 
 /* quickbuy buttons */
-div[role="gridcell"]:has(.rem-price-chart) div:has( > span > button path[d="M13 10.9756H20L11 23.9756V14.9756H4L13 1.97559V10.9756Z"]) {
+div[style*="position: absolute"]:has(.rem-price-chart) div:has( > span > button path[d="M13 10.9756H20L11 23.9756V14.9756H4L13 1.97559V10.9756Z"]) {
   display: none !important;
 }
 
-div[role="gridcell"]:has(.rem-price-chart):hover
+div[style*="position: absolute"]:has(.rem-price-chart):hover
 div:has( > span > button path[d="M13 10.9756H20L11 23.9756V14.9756H4L13 1.97559V10.9756Z"]) {
   display: block !important;
 }
 
-div[role="gridcell"]:has(.rem-price-chart):hover .rem-price-chart {
+div[style*="position: absolute"]:has(.rem-price-chart):hover .rem-price-chart {
     opacity: 0.15;
 }
 
-div[role="gridcell"] > span:hover {
+div[style*="position: absolute"] > span:hover {
     background-color: rgba(35, 36, 44, 0.5) !important;
 }
 
@@ -200,7 +195,7 @@ div[role="gridcell"] > span:hover {
 /************* MARKET CAP COLORS ************/
 
 /* default bg clear fix */
-div[role="gridcell"] .moxia-static-stats, div[role="gridcell"] div * :has(.moxia-static-stats) {
+div[style*="position: absolute"] .moxia-static-stats, div[style*="position: absolute"] div * :has(.moxia-static-stats) {
     background: none !important;
 }
 
@@ -222,14 +217,14 @@ div[class*="rem-mc"]::after {
 .rem-mc-1::after { background: linear-gradient(to right, #00000000 90%, rgba(var(--primary-light-blue) / 0.12)); }
 .rem-mc-2::after { background: linear-gradient(to right, #00000000 85%, rgba(var(--primary-light-blue) / 0.14)); }
 .rem-mc-3::after { background: linear-gradient(to right, #00000000 80%, rgba(var(--primary-light-blue) / 0.16)); }
-.rem-mc-4::after { background: linear-gradient(to right, #00000000 75%, rgba(var(--primary-light-blue) / 0.18)); }
-.rem-mc-5::after { background: linear-gradient(to right, #00000000 70%, rgba(var(--primary-light-blue) / 0.20)); }
+.rem-mc-4::after { background: linear-gradient(to right, #00000000 75%, rgba(var(--primary-yellow) / 0.18)); }
+.rem-mc-5::after { background: linear-gradient(to right, #00000000 70%, rgba(var(--primary-yellow) / 0.20)); }
 
 .rem-mc-6::after { background: linear-gradient(to right, #00000000 85%, rgba(var(--primary-yellow) / 0.12)); }
 .rem-mc-7::after { background: linear-gradient(to right, #00000000 77%, rgba(var(--primary-yellow) / 0.14)); }
 .rem-mc-8::after { background: linear-gradient(to right, #00000000 69%, rgba(var(--primary-yellow) / 0.16)); }
-.rem-mc-9::after { background: linear-gradient(to right, #00000000 60%, rgba(var(--primary-yellow) / 0.18)); }
-.rem-mc-10::after { background: linear-gradient(to right, #00000000 55%, rgba(var(--primary-yellow) / 0.20)); }
+.rem-mc-9::after { background: linear-gradient(to right, #00000000 60%, rgba(var(--primary-green) / 0.18)); }
+.rem-mc-10::after { background: linear-gradient(to right, #00000000 55%, rgba(var(--primary-green) / 0.20)); }
 
 .rem-mc-11::after { background: linear-gradient(to right, #00000000 82%, rgba(var(--primary-green) / 0.12)); }
 .rem-mc-12::after { background: linear-gradient(to right, #00000000 78%, rgba(var(--primary-green) / 0.14)); }
