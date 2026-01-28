@@ -1,34 +1,34 @@
 {
   "name": "Padre REMASTERED",
-  "description": "Extends Padre.gg with advanced features. Built for serious memecoin traders.",
-  "version": "1.1",
+  "description": "Extends Padre.gg with advanced features. Built by d.kenno2000@gmail.com for serious memecoin traders.",
+  "version": "1.0",
   "manifest_version": 3,
   "icons": {
     "128": "img/remastered-logo.png"
   },
   "action": {
     "default_icon": { "128": "img/remastered-logo.png", "16": "img/remastered-logo.png", "48": "img/remastered-logo.png" },
-    "default_popup": "popup.html"
+    "default_popup": "html/popup.html"
   },
   "background": {
-    "service_worker": "js/padre-service.js"
+    "service_worker": "dist/axiom-service.js",
+    "type": "module"
   },
-  "host_permissions": [ "<all_urls>" ],
-  "permissions": [ "tabs", "webRequest", "webNavigation", "storage", "offscreen", "scripting", "activeTab", "debugger" ],
+  "host_permissions": ["*://*.padre.gg/*", "*://*.pump.fun/*", "*://*.raydium.io/*", "*://*.bags.fm/*", "*://*.dquery.ai/*", "*://*.dexscreener.com/*", "*://*.mevx.io/*", "*://*.four.meme/*", "*://*.ape.pro/*", "*://*.sintral.io/*", "*://*.tinyastro.io/*", "*://*.coin-checker.xyz/*", "*://*.nitter.net/*", "*://*.blazingworld.me/*", "*://*.jup.ag/*", "*://*.launchonsoar.com/*", "*://*.debot.ai/*"],
+  "permissions": [ "tabs", "storage", "offscreen", "scripting", "webRequest", "activeTab" ],
   "content_scripts": [
     {
       "run_at": "document_end",
       "matches": ["*://*.padre.gg/*"],
       "js": ["/libs/livekit.bundle.js", "src/padre-rem.js"],
       "css": ["css/padre-rem-core.css"],
-      "all_frames": true
+      "all_frames": false
     }
   ],
   "web_accessible_resources": [
     {
       "resources": ["offscreen.html", "img/*.jpg", "img/*.png", "*.js" ],
-      "matches": ["<all_urls>"]
+      "matches": ["*://*.padre.gg/*"]
     }
   ]
-
 }
